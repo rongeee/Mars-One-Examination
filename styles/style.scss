@@ -4,6 +4,7 @@
 @import "layouts/hero";
 @import "layouts/newsky";
 @import "layouts/info-page";
+@import "layouts/faq-page";
 
 
 body {
@@ -25,4 +26,24 @@ body {
     width: 100%;
     object-fit: cover;
     position: absolute;
+}
+
+.button {
+    background-color: transparent;
+    color: $color--main-1;
+    border: solid 1px $color--main-1;
+    border-radius: 10px;
+    height: 38px;
+    width: 128px;
+    cursor: pointer;
+    font-family: $font--main;
+    margin: 1em 0 1em 0;
+    transition: 100ms;
+
+    &:hover {
+        background-color: $color--main-1;
+        color: $color--background-2;
+        border: solid 1px $color--background-1;
+
+    }
 }

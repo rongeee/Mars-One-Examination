@@ -1,6 +1,6 @@
 .hero {
-    background-image: linear-gradient(rgba($color--main-2, 0.3),
-    rgba($color--main-2, 0.3)), url(../projekt-bilder/page-1/hero-1.jpg);
+    background-image: linear-gradient(rgba(#c15555, 0.5),
+            rgba(#240202, 0.5)), url(../projekt-bilder/page-1/hero-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100% 50%;
@@ -24,6 +24,7 @@
     &__content {
         max-width: 50%;
         font-size: 1.5rem;
+
         @include for-desktop(550px) {
             grid-column: 2;
             max-width: 55%;
@@ -33,7 +34,7 @@
     &__headline {
         color: $color--background-2;
         font-weight: 800;
- 
+
         margin: 0;
 
         @include for-desktop(550px) {
@@ -43,10 +44,17 @@
 
     &__desc {
         color: $color--hero-desc;
-        margin-top: 0.5rem;;
+        margin-top: 0.5rem;
+        ;
         border-top: solid 4px $color--background-2;
+
         @include for-desktop(550px) {
             font-size: 2rem;
         }
     }
+}
+
+.faq {
+    background-image: linear-gradient(rgba(#c15555, 0.5),
+            rgba(#240202, 0.5)), url(../projekt-bilder/page-2/hero-2.jpg);
 }

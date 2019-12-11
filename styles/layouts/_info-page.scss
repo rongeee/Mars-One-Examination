@@ -6,8 +6,15 @@
 
     &__headline {
         text-align: center;
+        color: $color--main-1;
+        margin-bottom: 3em;
+        font-weight: 800;
     }
 
+
+    &__article-headline {
+        color: $color--main-2;
+    }
 
     &__grid-wrapper {
         display: grid;
@@ -17,7 +24,7 @@
         gap: 1em;
         justify-items: center;
 
-        @include for-desktop(550px) {
+        @include for-desktop(650px) {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
@@ -27,16 +34,13 @@
         background-color: $color--background-2;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr auto;
         align-items: center;
         justify-content: center;
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
-        // padding: 1em;
+        box-shadow: $card--shadow;
 
-        @include for-desktop(550px) {
+
+        @include for-desktop(650px) {
             grid-column: span 2;
             flex-direction: row;
             grid-template-columns: 1fr 2fr;
@@ -62,31 +66,47 @@
 
     &__image {
         object-fit: fill;
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 200px;
+        max-height: 200px;
         width: 100%;
         align-self: center;
         justify-self: center;
 
-        @include for-desktop(550px) {
-            &--tall {
-                grid-column: 1;
-            }
+        &--no-padding {
+            max-height: 100%;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        @include for-desktop(650px) {
+
+            max-width: 150px;
+            max-height: 150px;
 
             &--no-padding {
                 max-height: 100%;
                 max-width: 100%;
                 padding: 0;
             }
+
+            &--tall {
+                grid-column: 1;
+            }
         }
     }
 
     &__text-content {
-        margin-left: 30px;
+        margin: 0 1em 0 1em;
 
         &--tall {
             grid-row: 2;
             align-self: center;
+        }
+
+        &.button {
+            align-self: center;
+            justify-items: center;
+            margin: auto;
         }
     }
 }

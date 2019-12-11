@@ -1,4 +1,5 @@
-.new-sky-page {
+.new-sky-page,
+.travel-section {
     display: grid;
     grid-template-rows: auto minmax(200px, 1fr);
     grid-auto-flow: row;
@@ -6,23 +7,22 @@
     padding-bottom: 0;
     background-color: $color--background-2;
 
-    @include for-desktop(550px) {
-        // grid-template-columns: minmax(200px, 600px) minmax(300px, 1fr);
-        // grid-template-rows: minmax(200px, 400px);
-        grid-template-rows: 1fr 1fr 1fr;
+    @include for-desktop(650px) {
+        grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-flow: column;
         padding-top: 0;
-        max-height: 55vh
+        min-height: 450px;
+        max-width: 2000px;
+        margin: auto;
     }
 
     &__text-content {
         max-width: 90%;
         margin: auto;
 
-        @include for-desktop(550px) {
+        @include for-desktop(650px) {
             grid-column: span 3;
-            grid-row: 2;
             max-width: 60%;
             grid-gap: 200px;
             align-self: center;
@@ -48,7 +48,7 @@
         max-width: 100%;
         min-height: 350px;
 
-        @include for-desktop(550px) {
+        @include for-desktop(650px) {
             grid-column: 1;
         }
     }
