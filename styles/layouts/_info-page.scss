@@ -1,7 +1,6 @@
 .info-page {
     background-color: $color--background-1;
-    padding-right: 3em;
-    padding-left: 3em;
+    padding: 3em;
     max-width: 1000px;
     margin: auto;
 
@@ -40,16 +39,16 @@
         @include for-desktop(550px) {
             grid-column: span 2;
             flex-direction: row;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr;
             padding: 1em;
 
             &:nth-child(2) {
-                padding: 0;
+                padding: 0 1em 0 0;
             }
 
             &:nth-child(3) {
-                grid-template-rows: 2fr 4fr;
+                grid-template-rows: 1fr 2fr;
                 grid-template-columns: 1fr;
             }
 
@@ -72,6 +71,12 @@
         @include for-desktop(550px) {
             &--tall {
                 grid-column: 1;
+            }
+
+            &--no-padding {
+                max-height: 100%;
+                max-width: 100%;
+                padding: 0;
             }
         }
     }
