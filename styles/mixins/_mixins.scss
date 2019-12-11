@@ -1,0 +1,6 @@
+@mixin for-desktop($minWidth) {
+    @media (min-width: $minWidth) {
+      @content;
+    }
+  }
+

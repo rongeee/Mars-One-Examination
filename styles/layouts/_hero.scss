@@ -1,0 +1,52 @@
+.hero {
+    background-image: linear-gradient(rgba($color--main-2, 0.3),
+    rgba($color--main-2, 0.3)), url(../projekt-bilder/page-1/hero-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @include for-desktop(550px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: end;
+        height: 100vh;
+    }
+
+    &__content {
+        max-width: 50%;
+        font-size: 1.5rem;
+        @include for-desktop(550px) {
+            grid-column: 2;
+            max-width: 55%;
+        }
+    }
+
+    &__headline {
+        color: $color--background-2;
+        font-weight: 800;
+ 
+        margin: 0;
+
+        @include for-desktop(550px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__desc {
+        color: $color--hero-desc;
+        margin-top: 0.5rem;;
+        border-top: solid 4px $color--background-2;
+        @include for-desktop(550px) {
+            font-size: 2rem;
+        }
+    }
+}
