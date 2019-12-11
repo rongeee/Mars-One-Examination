@@ -1,0 +1,147 @@
+.faq-section {
+
+    background-color: $color--background-1;
+    padding: 3em 0 3em 0;
+
+    &__grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 1em;
+        max-width: 2000px;
+        margin: auto;
+
+        @include for-desktop(750px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            min-height: 70vh;
+        }
+    }
+
+    &__paragraph--padding {
+        padding: 1em;
+    }
+
+    &__article {
+        background-color: $color--background-2;
+        padding: 1em;
+        box-shadow: $card--shadow;
+
+        &--image {
+            padding: 0;
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+        }
+
+        @include for-desktop(750px) {
+            grid-column: span 2;
+
+            &--tall {
+                grid-row: span 2;
+                grid-column: 1;
+            }
+
+            &--image {
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr;
+                padding: 0 0 0 3em;
+                align-items: center;
+                justify-items: center;
+                grid-column-gap: 100px;
+                max-height: 600px;
+            }
+        }
+    }
+
+    &__headline {
+        @extend .info-page__headline;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    &__article-headline {
+        @extend .info-page__article-headline;
+    }
+
+    &__span {
+        display: block;
+        margin: 1em 0 1em 0;
+    }
+
+    &__list {
+        list-style: none;
+        /* Remove default bullets */
+    }
+
+    &__listitem {
+        font-weight: bold;
+
+        &:before {
+            content: "\2022";
+            color: $color--main-2;
+            display: inline-block;
+            font-weight: 300;
+            width: 2em;
+            margin-left: -2em;
+        }
+    }
+
+}
+
+.travel-section {
+    &__image {
+        background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include for-desktop(650px) {
+        grid-template-rows: 1fr;
+    }
+
+    &__planet {
+        &--sun {
+            height: 30px;
+            width: 30px;
+            align-self: center;
+        }
+
+        &--mars {
+            height: 15px;
+            width: 15px;
+            position: absolute;
+
+
+            animation: myOrbit-mars 15s linear infinite;
+        }
+
+        &--earth {
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            animation: myOrbit-earth 8s linear infinite;
+        }
+    }
+}
+
+@keyframes myOrbit-earth {
+    from {
+        transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+}
+
+@keyframes myOrbit-mars {
+    from {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
