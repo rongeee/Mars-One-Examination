@@ -29,6 +29,13 @@
             grid-column: 2;
             max-width: 55%;
         }
+
+        &--join {
+            grid-area: 2/1;
+            max-width: 55%;
+            justify-self: center;
+            margin-bottom: 2em;
+        }
     }
 
     &__headline {
@@ -57,4 +64,11 @@
 .faq {
     background-image: linear-gradient(rgba(#c15555, 0.5),
             rgba(#240202, 0.5)), url(../projekt-bilder/page-2/hero-2.jpg);
+}
+
+.join {
+    background-image: linear-gradient(rgba(#c15555, 0.5),
+            rgba(#240202, 0.5)),
+        url(../projekt-bilder/page-3/hero-3.jpg);
+
 }

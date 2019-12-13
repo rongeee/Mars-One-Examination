@@ -5,6 +5,7 @@
 @import "layouts/newsky";
 @import "layouts/info-page";
 @import "layouts/faq-page";
+@import "layouts/join-page";
 
 
 body {
@@ -28,7 +29,8 @@ body {
     position: absolute;
 }
 
-.button {
+.button,
+.input-button {
     background-color: transparent;
     color: $color--main-1;
     border: solid 1px $color--main-1;

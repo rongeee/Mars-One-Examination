@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars One</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__logo">
+      <img src="/projekt-bilder/logo.svg" alt="logo">
+    </div>
+    <nav class="site-header__nav-wrapper">
+      <ul class="site-header__navlist">
+        <li class="site-header__item"><a href="/index.html" class="site-header__itemlink">Mars One</li></a>
+        <li class="site-header__item"><a href="/faq.html" class="site-header__itemlink site-header__itemlink">FAQ</li></a>
+        <li class="site-header__item"><a href="/join.html" class="site-header__itemlink site-header__itemlink--active">Join the Crew</li></a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero join">
+      <div class="hero__content--join">
+        <h1 class="hero__headline">Be brave, join
+          the journey!</h1>
+        <h2 class="hero__desc">Be one of the next heroes in space </h2>
+      </div>
+    </section>
+    <article class="join-banner">
+      <h2 class="join-banner__headline">Join us in the mission</h2>
+      <h3 class="join-banner__paragraph">Be part of the mission. Send us your motivation of why just you should be the next space traveler</h3>
+    </article>
+    <section>
+      <form class="contact-form" action="#">
+        <div class="contact-form__entry">
+          <label class="contact-form__headline" for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" class="contact-form__input" />
+        </div>
+        <div class="contact-form__entry">
+          <label class="contact-form__headline" for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname" class="contact-form__input" />
+        </div>
+        <div class="contact-form__entry contact-form__entry--date">
+          <label class="contact-form__headline" for="date">Date</label>
+          <input type="date" name="date" id="date" class="contact-form__input contact-form__input--date">
+        </div>
+        <div class="contact-form__entry">
+          <label class="contact-form__headline" for="prof">Professional</label>
+          <input type="text" name="prof" id="prof" class="contact-form__input" />
+        </div>
+        <div class="contact-form__entry">
+          <label class="contact-form__headline" for="skill">Prime skill</label>
+          <input type="text" name="skill" id="skill" class="contact-form__input" />
+        </div>
+        <div class="contact-form__entry contact-form__entry--motivation">
+          <label class="contact-form__headline" for="msg">Motivation</label>
+          <textarea name="motivation" id="motivation" class="contact-form__input contact-form__input--motivation"></textarea>
+        </div>
+        <input type="submit" class="contact-form__input-button input-button" value="Submit">
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <h2 class="site-footer__headline">Mars One</h2>
+    <p class="site-footer__desc">This site is made for educational purpose and is based on the real <span class="site-footer__highlight">Mars One</span> project.</p>
+  </footer>
+</body>
+
+</html>
