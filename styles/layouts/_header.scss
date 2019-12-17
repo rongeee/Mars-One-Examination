@@ -5,8 +5,9 @@
     align-items: center;
     flex-direction: column;
     padding: 1em;
+    z-index: 3;
 
-    @include for-desktop(550px) {
+    @include for-tablet {
         justify-content: space-between;
         flex-direction: row;
 
@@ -26,6 +27,7 @@
 
         &--active {
             border-bottom: 3px solid $color--main-2;
+            z-index: 2;
         }
     }
 
