@@ -30,6 +30,28 @@
         }
     }
 
+    &__button {
+        @include button;
+        grid-column: 1;
+        padding: 1em;
+        justify-self: center;
+        align-self: center;
+        margin: 1em 0 1em 1em;
+
+        @include for-desktop {
+            grid-column: 2;
+            justify-self: start;
+
+            &--tall {
+                justify-self: start;
+                align-self: center;
+                grid-row: 3;
+                grid-column: 1;
+                margin: 0;
+            }
+        }
+    }
+
     &__article {
         background-color: $color--background-2;
         display: grid;
@@ -43,7 +65,7 @@
         @include for-desktop {
             grid-column: span 2;
             flex-direction: row;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 2fr 3fr;
             grid-template-rows: 1fr;
             padding: 1em;
 
@@ -52,7 +74,7 @@
             }
 
             &:nth-child(3) {
-                grid-template-rows: 1fr 2fr;
+                grid-template-rows: 1fr 1fr auto;
                 grid-template-columns: 1fr;
             }
 
@@ -71,6 +93,7 @@
         width: 100%;
         align-self: center;
         justify-self: center;
+        grid-row: 1;
 
         &--no-padding {
             max-height: 100%;
@@ -79,18 +102,21 @@
         }
 
         @include for-desktop {
-
             max-width: 150px;
             max-height: 150px;
+            grid-column: 1;
+            grid-row: span 2;
 
             &--no-padding {
                 max-height: 100%;
                 max-width: 100%;
                 padding: 0;
+                grid-row: span 2;
             }
 
             &--tall {
                 grid-column: 1;
+                grid-row: 1;
             }
         }
     }
@@ -102,11 +128,9 @@
             grid-row: 2;
             align-self: center;
         }
+    }
 
-        &.button {
-            align-self: center;
-            justify-items: center;
-            margin: auto;
-        }
+    @include for-desktop {
+        grid-column: 2;
     }
 }

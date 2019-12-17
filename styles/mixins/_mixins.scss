@@ -9,3 +9,26 @@
     @content;
   }
 }
+
+@mixin button {
+
+  background-color: transparent;
+  color: $color--main-1;
+  border: solid 1px $color--main-1;
+  border-radius: 10px;
+  height: 38px;
+  width: 128px;
+  cursor: pointer;
+  font-family: $font--main;
+  transition: 100ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $color--main-1;
+    color: $color--background-2;
+    border: solid 1px $color--background-1;
+
+  }
+}
