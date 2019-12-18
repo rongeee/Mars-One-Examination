@@ -11,7 +11,7 @@
         max-width: 2000px;
         margin: auto;
 
-        @include for-tablet {
+        @include for-desktop {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto 1fr;
             min-height: 70vh;
@@ -33,7 +33,7 @@
             grid-template-rows: 1fr 2fr;
         }
 
-        @include for-tablet {
+        @include for-desktop {
             grid-column: span 2;
 
             &--tall {
@@ -97,7 +97,7 @@
         align-items: center;
     }
 
-    @include for-tablet {
+    @include for-desktop {
         grid-template-rows: 1fr;
     }
 

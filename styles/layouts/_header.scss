@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-flow: column wrap;
     padding: 1em;
     z-index: 3;
 
@@ -13,9 +13,24 @@
 
     }
 
+    &__logo {
+        max-width: 60px;
+
+        @include for-tablet {
+            padding-left: 2em;
+        }
+    }
+
+    &__logo img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
     &__navlist {
         list-style: none;
         display: flex;
+        justify-content: center;
         flex-flow: row wrap;
         font-weight: bold;
         padding: 0;
@@ -24,15 +39,36 @@
     &__itemlink {
         text-decoration: none;
         color: $color--background-2;
+        position: relative;
+        padding-bottom: 7px;
 
         &--active {
             border-bottom: 3px solid $color--main-2;
-            z-index: 2;
+        }
+
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 50%;
+            top: 26px;
+            position: absolute;
+            background: $color--main-2;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
         }
     }
 
     &__item {
-        padding: 0 1em;
+        padding: 0.5em 2em;
 
 
     }
