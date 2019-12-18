@@ -30,7 +30,6 @@
     &__button {
         @include button;
         grid-column: 1;
-        padding: $pad--small;
         justify-self: center;
         align-self: center;
 
