@@ -1,5 +1,5 @@
 .join-banner {
-  margin: 3em auto;
+  margin: $pad--big auto;
   text-align: center;
   max-width: 90%;
 
@@ -9,25 +9,34 @@
 
   &__headline {
     color: $color--main-2;
+    font-size: $fs--med;
+
+    @include for-tablet {
+      font-size: $fs--big;
+    }
   }
 
   &__paragraph {
     color: $color--main-1;
     font-weight: 300;
+
+    @include for-tablet {
+      font-size: $fs--med;
+    }
   }
 }
 
 .contact-form {
   display: grid;
   align-items: center;
-  margin: 3em auto;
+  margin: $pad--big auto;
   background-color: $color--background-2;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr) 3fr 1fr;
-  grid-gap: 1em;
+  grid-gap: $pad--small;
   box-shadow: $card--shadow;
   max-width: 80%;
-  padding: 2em;
+  padding: $pad--big;
 
   @include for-desktop {
     grid-template-columns: 2fr 2fr 1fr;
@@ -56,7 +65,7 @@
   &__headline {
     font-weight: 800;
     font-size: 12px;
-    margin-bottom: 1em;
+    margin-bottom: $pad--small;
   }
 
   &__input {
@@ -70,11 +79,11 @@
 
   &__input-button {
     @include button;
-
+    justify-self: center;
 
     @include for-desktop {
       grid-column: span 3;
-      justify-self: center;
+
     }
   }
 }
