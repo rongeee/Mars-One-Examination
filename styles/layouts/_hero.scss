@@ -21,8 +21,6 @@
             clip-path: circle(46% at 50% 50%);
             background-image: linear-gradient($color--hero-desc);
             display: flex;
-            flex-direction: center;
-            align-items: center;
             height: 100%;
             width: 100%;
             position: absolute;
@@ -34,8 +32,6 @@
             clip-path: circle(45% at 50% 50%);
             background-image: linear-gradient(190deg, $color--header 30%, $color--main-1 99%);
             display: flex;
-            flex-direction: center;
-            align-items: center;
             height: 100%;
             width: 100%;
             position: absolute;

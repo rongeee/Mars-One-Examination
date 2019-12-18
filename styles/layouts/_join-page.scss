@@ -29,6 +29,7 @@
 .contact-form {
   display: grid;
   align-items: center;
+  justify-content: center;
   margin: $pad--big auto;
   background-color: $color--background-2;
   grid-template-columns: 1fr;
