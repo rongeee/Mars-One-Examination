@@ -1,55 +1,55 @@
 .new-sky-page,
 .travel-section {
-    display: grid;
-    grid-template-rows: auto minmax(200px, 1fr);
-    grid-auto-flow: row;
-    max-width: 100%;
-    padding-bottom: 0;
-    background-color: $color--background-2;
+  display: grid;
+  grid-template-rows: auto minmax(200px, 1fr);
+  grid-auto-flow: row;
+  max-width: 100%;
+  padding-bottom: 0;
+  background-color: $color--background-2;
+
+  @include for-desktop {
+    grid-template-rows: minmax(60vh, 1fr);
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-auto-flow: column;
+    padding-top: 0;
+    min-height: 450px;
+    max-width: 2000px;
+    margin: auto;
+  }
+
+  &__text-content {
+    max-width: 90%;
+    margin: auto;
 
     @include for-desktop {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-flow: column;
-        padding-top: 0;
-        min-height: 450px;
-        max-width: 2000px;
-        margin: auto;
+      grid-column: span 3;
+      max-width: 60%;
+      grid-gap: 200px;
+      align-self: center;
     }
+  }
 
-    &__text-content {
-        max-width: 90%;
-        margin: auto;
+  &__headline {
+    color: $color--main-2;
+    font-size: 36px;
+  }
 
-        @include for-desktop {
-            grid-column: span 3;
-            max-width: 60%;
-            grid-gap: 200px;
-            align-self: center;
-        }
+  &__highlight {
+    color: $color--main-2;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    font-size: 18px;
+  }
+
+  &__image {
+    grid-row: span 3;
+    max-width: 100%;
+    min-height: 350px;
+
+    @include for-desktop {
+      grid-column: 1;
     }
-
-    &__headline {
-        color: $color--main-2;
-        font-size: 36px;
-    }
-
-    &__highlight {
-        color: $color--main-2;
-        font-weight: bold;
-    }
-
-    &__paragraph {
-        font-size: 14px;
-    }
-
-    &__image {
-        grid-row: span 3;
-        max-width: 100%;
-        min-height: 350px;
-
-        @include for-desktop {
-            grid-column: 1;
-        }
-    }
+  }
 }

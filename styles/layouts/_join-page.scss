@@ -1,5 +1,6 @@
 .join-banner {
   margin: $pad--big auto;
+  padding: $pad--small;
   text-align: center;
   max-width: 90%;
 
@@ -43,15 +44,14 @@
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 5fr;
     grid-gap: 2em;
-    max-width: 1000px;
-    width: 80%;
+    max-width: 1300px;
+    width: 90%;
   }
 
   &__entry {
     display: flex;
     flex-direction: column;
     color: $color--main-1;
-
 
     &--motivation {
       @include for-desktop {
@@ -71,7 +71,11 @@
 
   &__input {
     font-family: $font--main;
-
+    color: $color--main-1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px $color--main-1;
 
     &--motivation {
       height: 100%;
@@ -84,7 +88,6 @@
 
     @include for-desktop {
       grid-column: span 3;
-
     }
   }
 }

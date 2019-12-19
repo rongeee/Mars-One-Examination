@@ -1,90 +1,87 @@
 .site-header {
-    background-color: $color--header;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    z-index: 3;
+  background-color: $color--header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  z-index: 3;
+
+  @include for-tablet {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__logo {
+    max-width: 60px;
+    padding-top: $pad--small;
 
     @include for-tablet {
-        justify-content: space-between;
-        flex-direction: row;
+      padding-left: 2em;
+      padding-top: 0;
+    }
+  }
+
+  &__logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__navlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-weight: bold;
+    padding: 0;
+  }
+
+  &__itemlink {
+    text-decoration: none;
+    color: $color--background-2;
+    position: relative;
+    padding-bottom: 7px;
+
+    &--active {
+      border-bottom: 3px solid $color--main-2;
     }
 
-    &__logo {
-        max-width: 60px;
-        padding-top: $pad--small;
-
-        @include for-tablet {
-            padding-left: 2em;
-            padding-top: 0;
-        }
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 3px;
+      left: 50%;
+      top: 26px;
+      position: absolute;
+      background: $color--main-2;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
     }
 
-    &__logo img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+    &:hover::after {
+      width: 100%;
+      left: 0;
     }
+  }
 
-    &__navlist {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-        font-weight: bold;
-        padding: 0;
-    }
-
-    &__itemlink {
-        text-decoration: none;
-        color: $color--background-2;
-        position: relative;
-        padding-bottom: 7px;
-
-        &--active {
-            border-bottom: 3px solid $color--main-2;
-        }
-
-        &::after {
-            background: none repeat scroll 0 0 transparent;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 3px;
-            left: 50%;
-            top: 26px;
-            position: absolute;
-            background: $color--main-2;
-            transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            width: 0;
-
-        }
-
-        &:hover::after {
-            width: 100%;
-            left: 0;
-        }
-    }
-
-    &__item {
-        padding: 0.5em 2em;
-
-
-    }
+  &__item {
+    padding: 0.5em 2em;
+  }
 }
 
 .site-footer {
-    background-color: $color--main-1;
-    color: $color--background-2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    padding: $pad--big;
-    text-align: center;
+  background-color: $color--main-1;
+  color: $color--background-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: $pad--big;
+  text-align: center;
 
-    &__highlight {
-        color: $color--main-2;
-    }
+  &__highlight {
+    color: $color--main-2;
+  }
 }

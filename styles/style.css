@@ -342,10 +342,10 @@
 @media (min-width: 750px) {
   .new-sky-page,
   .travel-section {
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: minmax(60vh, 1fr);
+        grid-template-rows: minmax(60vh, 1fr);
+    -ms-grid-columns: 3fr 2fr 2fr;
+        grid-template-columns: 3fr 2fr 2fr;
     grid-auto-flow: column;
     padding-top: 0;
     min-height: 450px;
@@ -386,7 +386,7 @@
 
 .new-sky-page__paragraph,
 .travel-section__paragraph {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .new-sky-page__image,
@@ -414,8 +414,15 @@
 .info-page__headline, .faq-section__headline {
   text-align: center;
   color: #2c4f80;
+  padding: 1em;
   margin-bottom: 1em;
-  font-weight: 800;
+  font-size: 2rem;
+}
+
+@media (min-width: 750px) {
+  .info-page__headline, .faq-section__headline {
+    font-size: 2rem;
+  }
 }
 
 .info-page__article-headline, .faq-section__article-headline {
@@ -612,7 +619,7 @@
 
 .faq-section {
   background-color: #f1f1f1;
-  padding: 3em 0 3em 0;
+  padding: 0 0 3em 0;
 }
 
 .faq-section__grid-wrapper {
@@ -676,11 +683,6 @@
     grid-column-gap: 100px;
     max-height: 600px;
   }
-}
-
-.faq-section__headline {
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 .faq-section__paragraph--padding {
@@ -806,6 +808,7 @@
 
 .join-banner {
   margin: 3em auto;
+  padding: 1em;
   text-align: center;
   max-width: 90%;
 }
@@ -867,8 +870,8 @@
     -ms-grid-rows: 1fr 1fr 5fr;
         grid-template-rows: 1fr 1fr 5fr;
     grid-gap: 2em;
-    max-width: 1000px;
-    width: 80%;
+    max-width: 1300px;
+    width: 90%;
   }
 }
 
@@ -903,6 +906,11 @@
 
 .contact-form__input {
   font-family: "Montserrat", sans-serif;
+  color: #2c4f80;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 1px #2c4f80;
 }
 
 .contact-form__input--motivation {

@@ -1,153 +1,147 @@
 .faq-section {
+  background-color: $color--background-1;
+  padding: 0 0 $pad--big 0;
 
-    background-color: $color--background-1;
-    padding: $pad--big 0 $pad--big 0;
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: $pad--small;
+    max-width: 2000px;
+    margin: auto;
+    min-width: 100%;
 
-    &__grid-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr;
-        grid-gap: $pad--small;
-        max-width: 2000px;
-        margin: auto;
-        min-width: 100%;
+    @include for-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      min-height: 70vh;
+    }
+  }
 
-        @include for-desktop {
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto 1fr;
-            min-height: 70vh;
-        }
+  &__article {
+    background-color: $color--background-2;
+    padding: $pad--small;
+    box-shadow: $card--shadow;
+
+    &--image {
+      padding: 0;
+      display: grid;
+      grid-template-rows: 1fr 2fr;
     }
 
-    &__article {
-        background-color: $color--background-2;
-        padding: $pad--small;
-        box-shadow: $card--shadow;
+    @include for-tablet {
+      grid-column: span 2;
+      padding: $pad--big;
 
-        &--image {
-            padding: 0;
-            display: grid;
-            grid-template-rows: 1fr 2fr;
-        }
+      &--tall {
+        grid-row: span 2;
+        grid-column: 1;
+      }
 
-        @include for-tablet {
-            grid-column: span 2;
-            padding: $pad--big;
-
-            &--tall {
-                grid-row: span 2;
-                grid-column: 1;
-            }
-
-            &--image {
-                grid-template-rows: 1fr;
-                grid-template-columns: 1fr 1fr;
-                padding: 0 0 0 $pad--big;
-                align-items: center;
-                justify-items: center;
-                grid-column-gap: 100px;
-                max-height: 600px;
-            }
-        }
+      &--image {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0 0 $pad--big;
+        align-items: center;
+        justify-items: center;
+        grid-column-gap: 100px;
+        max-height: 600px;
+      }
     }
+  }
 
-    &__headline {
-        @extend .info-page__headline;
-        margin-top: $pad--small;
-        margin-bottom: $pad--small;
+  &__headline {
+    @extend .info-page__headline;
+  }
+
+  &__paragraph--padding {
+    padding: $pad--small;
+
+    @include for-desktop {
+      padding-left: $pad--big;
     }
+  }
 
-    &__paragraph--padding {
-        padding: $pad--small;
+  &__article-headline {
+    @extend .info-page__article-headline;
+  }
 
-        @include for-desktop {
-            padding-left: $pad--big;
-        }
+  &__paragraph {
+    margin: $pad--small 0 $pad--small 0;
+  }
+
+  &__list {
+    list-style: none;
+    /* Remove default bullets */
+  }
+
+  &__listitem {
+    font-weight: bold;
+
+    &::before {
+      content: "\2022";
+      color: $color--main-2;
+      display: inline-block;
+      font-weight: 300;
+      width: 2em;
+      margin-left: -2em;
     }
-
-
-    &__article-headline {
-        @extend .info-page__article-headline;
-    }
-
-    &__paragraph {
-        margin: $pad--small 0 $pad--small 0;
-    }
-
-    &__list {
-        list-style: none;
-        /* Remove default bullets */
-    }
-
-    &__listitem {
-        font-weight: bold;
-
-        &::before {
-            content: "\2022";
-            color: $color--main-2;
-            display: inline-block;
-            font-weight: 300;
-            width: 2em;
-            margin-left: -2em;
-        }
-    }
-
+  }
 }
 
 .travel-section {
-    &__image {
-        background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &__image {
+    background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include for-desktop {
+    grid-template-rows: 1fr;
+  }
+
+  &__planet {
+    &--sun {
+      height: 30px;
+      width: 30px;
+      align-self: center;
     }
 
-    @include for-desktop {
-        grid-template-rows: 1fr;
+    &--mars {
+      height: 15px;
+      width: 15px;
+      position: absolute;
+
+      animation: myOrbit-mars 15s linear infinite;
     }
 
-    &__planet {
-        &--sun {
-            height: 30px;
-            width: 30px;
-            align-self: center;
-        }
-
-        &--mars {
-            height: 15px;
-            width: 15px;
-            position: absolute;
-
-
-            animation: myOrbit-mars 15s linear infinite;
-        }
-
-        &--earth {
-            position: absolute;
-            height: 15px;
-            width: 15px;
-            animation: myOrbit-earth 8s linear infinite;
-        }
+    &--earth {
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      animation: myOrbit-earth 8s linear infinite;
     }
+  }
 }
 
 @keyframes myOrbit-earth {
-    from {
-        transform: rotate(0deg) translateX(75px) rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg) translateX(75px) rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg) translateX(75px) rotate(-360deg);
-    }
+  to {
+    transform: rotate(360deg) translateX(75px) rotate(-360deg);
+  }
 }
 
 @keyframes myOrbit-mars {
-    from {
-        transform: rotate(0deg) translateX(120px) rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg) translateX(120px) rotate(-360deg);
-    }
+  to {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
 }
