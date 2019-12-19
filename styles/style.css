@@ -406,8 +406,8 @@
 
 .info-page {
   background-color: #f1f1f1;
-  padding: 3em;
-  max-width: 1000px;
+  padding-bottom: 3em;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -427,6 +427,8 @@
 
 .info-page__article-headline, .faq-section__article-headline {
   color: #e32700;
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .info-page__grid-wrapper {
@@ -695,6 +697,11 @@
   }
 }
 
+.faq-section__article-headline {
+  font-weight: 300;
+  font-size: 24px;
+}
+
 .faq-section__paragraph {
   margin: 1em 0 1em 0;
 }
@@ -731,6 +738,15 @@
           align-items: center;
 }
 
+.travel-section__headline {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.travel-section__paragraph {
+  font-size: 16px;
+}
+
 @media (min-width: 750px) {
   .travel-section {
     -ms-grid-rows: 1fr;
@@ -739,16 +755,16 @@
 }
 
 .travel-section__planet--sun {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
 .travel-section__planet--mars {
-  height: 15px;
-  width: 15px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   -webkit-animation: myOrbit-mars 15s linear infinite;
           animation: myOrbit-mars 15s linear infinite;
@@ -756,53 +772,53 @@
 
 .travel-section__planet--earth {
   position: absolute;
-  height: 15px;
-  width: 15px;
+  height: 25px;
+  width: 25px;
   -webkit-animation: myOrbit-earth 8s linear infinite;
           animation: myOrbit-earth 8s linear infinite;
 }
 
 @-webkit-keyframes myOrbit-earth {
   from {
-    -webkit-transform: rotate(0deg) translateX(75px) rotate(0deg);
-            transform: rotate(0deg) translateX(75px) rotate(0deg);
+    -webkit-transform: rotate(0deg) translateX(85px) rotate(0deg);
+            transform: rotate(0deg) translateX(85px) rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(75px) rotate(-360deg);
-            transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    -webkit-transform: rotate(360deg) translateX(85px) rotate(-360deg);
+            transform: rotate(360deg) translateX(85px) rotate(-360deg);
   }
 }
 
 @keyframes myOrbit-earth {
   from {
-    -webkit-transform: rotate(0deg) translateX(75px) rotate(0deg);
-            transform: rotate(0deg) translateX(75px) rotate(0deg);
+    -webkit-transform: rotate(0deg) translateX(85px) rotate(0deg);
+            transform: rotate(0deg) translateX(85px) rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(75px) rotate(-360deg);
-            transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    -webkit-transform: rotate(360deg) translateX(85px) rotate(-360deg);
+            transform: rotate(360deg) translateX(85px) rotate(-360deg);
   }
 }
 
 @-webkit-keyframes myOrbit-mars {
   from {
-    -webkit-transform: rotate(0deg) translateX(120px) rotate(0deg);
-            transform: rotate(0deg) translateX(120px) rotate(0deg);
+    -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg);
+            transform: rotate(0deg) translateX(130px) rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(120px) rotate(-360deg);
-            transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg);
+            transform: rotate(360deg) translateX(130px) rotate(-360deg);
   }
 }
 
 @keyframes myOrbit-mars {
   from {
-    -webkit-transform: rotate(0deg) translateX(120px) rotate(0deg);
-            transform: rotate(0deg) translateX(120px) rotate(0deg);
+    -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg);
+            transform: rotate(0deg) translateX(130px) rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(120px) rotate(-360deg);
-            transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg);
+            transform: rotate(360deg) translateX(130px) rotate(-360deg);
   }
 }
 
@@ -870,8 +886,8 @@
     -ms-grid-rows: 1fr 1fr 5fr;
         grid-template-rows: 1fr 1fr 5fr;
     grid-gap: 2em;
-    max-width: 1300px;
-    width: 90%;
+    max-width: 1200px;
+    width: 70%;
   }
 }
 
