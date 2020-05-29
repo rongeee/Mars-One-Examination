@@ -1,7 +1,7 @@
 .info-page {
   background-color: $color--background-1;
   padding-bottom: $pad--big;
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
 
   &__headline {
@@ -68,6 +68,35 @@
     justify-content: center;
     padding: $pad--small;
     box-shadow: $card--shadow;
+    opacity: 0;
+    transition: transform 2s 0.25s cubic-bezier(0, 1, 0.3, 1),
+      opacity 0.3s 0.25s ease-out;
+    will-change: transform, opacity;
+
+    &.left {
+      transform: translateX(-20em);
+    }
+    &.top {
+      transform: translateY(-20em);
+    }
+    &.right {
+      transform: translateX(20em);
+    }
+
+    &.visible.left {
+      opacity: 1;
+      transform: none;
+    }
+
+    &.visible.top {
+      opacity: 1;
+      transform: none;
+    }
+
+    &.visible.right {
+      opacity: 1;
+      transform: none;
+    }
 
     @include for-desktop {
       grid-column: span 2;

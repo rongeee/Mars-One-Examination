@@ -82,6 +82,7 @@
   flex-flow: column wrap;
   padding: $pad--big;
   text-align: center;
+  z-index: 5;
 
   &__highlight {
     color: $color--main-2;
